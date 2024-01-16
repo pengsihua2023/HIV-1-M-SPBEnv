@@ -12,3 +12,6 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | D | 145 | K |2|
 | F1 | 73 | L |3 |
 
+![Figure H](images/image-H.png)
+![Figure J](images/image-J.png)
+
