@@ -2,7 +2,7 @@
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
-### Table 1 The data set of the 12 subtypes of HIV env DNA sequences.
+### Table 1 The original data set of the 12 subtypes of HIV env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
 | A1 | 311 | F2 |16 |
