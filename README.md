@@ -44,19 +44,19 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 ### Table 2 The training data set for model training after augmentation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 1,000 | F2 |1,000 |
-| A2 | 1,000 | G |1,000 |
-| B | 1,000 | H |1,000 |
-| C | 1,000 | J |1,000 |
-| D | 1,000 | K |1,000|
-| F1 | 1,000 | L |1,000 |
+| A1 | 500 | F2 |500 |
+| A2 | 500 | G |500 |
+| B | 500 | H |500 |
+| C | 500 | J |500 |
+| D | 500 | K |500|
+| F1 | 500 | L |500 |
 ### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 300 | F2 |300 |
-| A2 | 300 | G |300 |
-| B | 300 | H |300 |
-| C | 300 | J |300 |
-| D | 300 | K |300|
-| F1 | 300 | L |300 |
+| A1 | 100 | F2 |100 |
+| A2 | 100 | G |100 |
+| B | 100 | H |100 |
+| C | 100 | J |100 |
+| D | 100 | K |100|
+| F1 | 100 | L |100 |
 
