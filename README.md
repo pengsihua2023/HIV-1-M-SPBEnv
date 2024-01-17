@@ -15,7 +15,7 @@ conda create -n HIV-SPBEnv python=3.9.18
 conda activate HIV-SPBEnv  
 
 pip install -r requirements.txt  
-## 
+## Model architecture of HIV-SPBEnv deep learning classifier  
 ## Usage For AI Researchers
 You can run it from the command line  
 
