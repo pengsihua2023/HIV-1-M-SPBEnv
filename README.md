@@ -1,14 +1,14 @@
 # HIV-SPBEnv
 ## Requirements
-Python == 3.6.13
-opencv-python == 4.5.1.48
-tensorflow-gpu == 1.14.0
-scikit-learn == 0.24.0
-pandas == 1.1.5
-numpy == 1.19.5
-matplotlib == 3.3.4
-h5py == 2.10.0
-Bio == 1.3.9
+Python == 3.6.13  
+opencv-python == 4.5.1.48  
+tensorflow-gpu == 1.14.0  
+scikit-learn == 0.24.0  
+pandas == 1.1.5  
+numpy == 1.19.5  
+matplotlib == 3.3.4  
+h5py == 2.10.0  
+Bio == 1.3.9  
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
