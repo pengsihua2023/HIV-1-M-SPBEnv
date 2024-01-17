@@ -16,9 +16,7 @@ conda activate HIV-SPBEnv
 
 pip install -r requirements.txt  
 ## Model architecture of HIV-SPBEnv deep learning classifier  
-![替代文字](images/图像)
-
-
+![Model architecture of HIV-SPBEnv](images/env-arc.png)  
 ###  Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains four CNN blocks, with each CNN block consisting of two CNN layers. The BiLSTM module consists of two BiLSTM layers. The FCN module consists of four fully connected neural network layers.
 ## Usage For AI Researchers
 You can run it from the command line  
