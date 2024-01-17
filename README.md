@@ -25,7 +25,9 @@ You can run it from the command line
 ## Usage For Biomedical Researchers
 We deployed a trained model on a dedicated server, which is publicly available at http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.
 
-Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.  
+Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification. 
+## Results
+HIV-SPBEnv was trained by using the original dataset (Table 1) plus the augmentaion dataset (Table 2).  HIV-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3).
 ## The data sets
 ### The original dataset
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1. For this data set, the sample size of some subtypes is too small, and there are only 2-5 samples in 4 subtypes. It is obviously impossible to build a machine learning model on such data. Then the only way is to find ways to increase the sample size for the small sample size subtypes.  
@@ -43,12 +45,12 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 ### Table 2 The training data set for model training after augmentation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 500 | F2 |500 |
-| A2 | 500 | G |500 |
-| B | 500 | H |500 |
-| C | 500 | J |500 |
-| D | 500 | K |500|
-| F1 | 500 | L |500 |
+| A1 | 500(300) | F2 |500(14) |
+| A2 | 500(5) | G |500(130) |
+| B | 500(500) | H |500(8) |
+| C | 500(500) | J |500(5) |
+| D | 500(120) | K |500(2)|
+| F1 | 500(70) | L |500(3) |
 ### The evaluation dataset
 ### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
