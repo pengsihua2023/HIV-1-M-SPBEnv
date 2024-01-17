@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ## Usage For AI Researchers
 You can run it from the command line  
 
-    cd ./DeepmRNALoc  
+    cd ./HIV-SPBEnv  
     python extract_feature.py  
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
