@@ -51,7 +51,7 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | C | 500 (500) | J |500 (4) |
 | D | 500 (120) | K |500 (1)|
 | F1 | 500 (60) | L |500 (2) |
-#### * 500 (300): The number in parentheses is the original sample data. In this case the sample size of augmentation data is 500-300=200.
+#### * 500 (300): The number in bracket is the original sample data. In this case the sample size of augmentation data is 500-300=200.
 ### The evaluation dataset
 ### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
@@ -62,4 +62,4 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | C | 100 (100) | J |100 (1) |
 | D | 100 (25) | K |100 (1)|
 | F1 | 100 (13) | L |100 (1) |
-#### ** 100 (11)**: The number in parentheses is the original sample data. In this case the sample size of augmentation data is 100-11=89.
+#### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of augmentation data is 100-11=89.
