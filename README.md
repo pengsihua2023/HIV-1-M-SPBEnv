@@ -70,6 +70,6 @@ Sihua Peng, Ming Zhang. HIV-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based 
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu) or Ming Zhang (Email: mzhang01@uga.edu).    
 
 Pull requests are highly welcomed!  
-## Acknowledgments
+## Acknowledgments  
 Thanks to Sapelo2 high performance cluster of the University of Georgia for providing computing infrastructure.  
 Thanks to Dr. José F. Cordero and Dr. Justin Bahl for their guidance and help during project implementation and paper writing.  
