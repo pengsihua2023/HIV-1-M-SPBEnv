@@ -18,7 +18,6 @@ pip install -r requirements.txt
 ## Usage For AI Researchers
 You can run it from the command line  
 
-feature extract:  
     cd ./DeepmRNALoc  
     python extract_feature.py  
 
