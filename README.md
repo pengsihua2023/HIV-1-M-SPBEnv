@@ -1,14 +1,13 @@
 # HIV-SPBEnv
 ## Requirements
-Python == 3.6.13  
-opencv-python == 4.5.1.48  
-tensorflow-gpu == 1.14.0  
-scikit-learn == 0.24.0  
-pandas == 1.1.5  
-numpy == 1.19.5  
-matplotlib == 3.3.4  
-h5py == 2.10.0  
-Bio == 1.3.9  
+Python == 3.9.18   
+torch == 2.1.0+cu121
+torchvision ==  0.16.0+cu121  
+scikit-learn == 1.3.2  
+pandas == 2.1.2  
+numpy == 1.24.1  
+matplotlib == 3.8.0  
+biopython == 1.79  
 
 ### Dependencies can be installed using the following command:
 conda create -n DeepmRNALoc python=3.6.13  
