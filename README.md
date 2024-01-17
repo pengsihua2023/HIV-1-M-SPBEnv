@@ -22,7 +22,7 @@ You can run it from the command line
     python extract_feature.py  
 
 ## Usage For Biomedical Researchers
-We deployed a trained model on a dedicated server, which is publicly available at http://www.peng-lab.org:8080/mRNA/, to make it easy for biomedical researcher users to utilize DeepmRNALoc in their research activity.
+We deployed a trained model on a dedicated server, which is publicly available at [http://www.peng-lab.org:8080/mRNA/](http://www.peng-lab.org:5000/analysis), to make it easy for biomedical researcher users to utilize DeepmRNALoc in their research activity.
 
 Users can upload their mRNA sequences to the server, and then they can quickly obtain the predicted results of the mRNA subcellular localization.
 
