@@ -10,6 +10,11 @@ matplotlib == 3.3.4
 h5py == 2.10.0  
 Bio == 1.3.9  
 
+### Dependencies can be installed using the following command:
+conda create -n DeepmRNALoc python=3.6.13  
+conda activate DeepmRNALoc  
+
+pip install -r requirements.txt  
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
 
