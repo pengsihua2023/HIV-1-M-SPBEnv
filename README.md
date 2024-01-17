@@ -1,4 +1,5 @@
-# HIV-SPBEnv
+# HIV-SPBEnv  
+HIV-SPBEnv is a project for HIV 1 subtype classification.  
 ## Requirements
 Python == 3.9.18    
 torch == 2.1.0+cu121  
@@ -24,15 +25,10 @@ You can run it from the command line
 ## Usage For Biomedical Researchers
 We deployed a trained model on a dedicated server, which is publicly available at http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.
 
-Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.
-
-HIV-SPBEnv is a project for HIV 1 subtype classification.
-The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
-
-
-
+Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.  
 ## The data sets
 ### The original dataset
+The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.  
 ### Table 1 The original data set of the 12 subtypes of HIV env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
