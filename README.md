@@ -1,7 +1,5 @@
-# HIV-SPBEnv#　Requirements
-
-
 # HIV-SPBEnv
+## Requirements
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
