@@ -23,9 +23,9 @@ You can run it from the command line
     python extract_feature.py  
 
 ## Usage For Biomedical Researchers
-We deployed a trained model on a dedicated server, which is publicly available at http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.
-
-Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification. 
+We deployed a trained model on a dedicated server, which is publicly available at:  
+http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
+Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.   
 ## Results
 HIV-SPBEnv was trained by using the original dataset (Table 1) plus the augmentaion dataset (Table 2).  HIV-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3).
 ## The data sets
