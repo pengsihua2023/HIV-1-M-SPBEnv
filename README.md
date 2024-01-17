@@ -42,7 +42,7 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | D | 145 | K |2|
 | F1 | 73 | L |3 |
 ### The Training dataset
-### Table 2 The training data set for model training after augmentation.
+### Table 2 The training data set for model training after augmentation.  
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
 | A1 | 500(300) | F2 |500(14) |
