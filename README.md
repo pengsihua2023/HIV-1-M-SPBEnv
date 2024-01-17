@@ -31,8 +31,8 @@ HIV-SPBEnv was trained by using the original dataset (Table 1) plus the augmenta
 ## The data sets
 ### The original dataset
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1. For this data set, the sample size of some subtypes is too small, and there are only 2-5 samples in 4 subtypes. It is obviously impossible to build a machine learning model on such data. Then the only way is to find ways to increase the sample size for the small sample size subtypes.  
-### The augmentation dataset
-We adopted molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and env gene large fragment recombination.  
+### The synthetic dataset
+We adopted molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and env gene large fragment recombination. Synthetic data samples are included in both the model training dataset (Table 2) and the model evaluation dataset (Table 3).    
 ### Table 1 The original data set of the 12 subtypes of HIV env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
@@ -52,7 +52,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | C | 500 (500) | J |500 (4) |
 | D | 500 (120) | K |500 (1)|
 | F1 | 500 (60) | L |500 (2) |
-#### * 500 (300): The number in bracket is the original sample data. In this case the sample size of augmentation data set is 500-300=200.  
+#### * 500 (300): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 500-300=200.  
 ### The evaluation dataset
 ### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
@@ -63,7 +63,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | C | 100 (100) | J |100 (1) |
 | D | 100 (25) | K |100 (1)|
 | F1 | 100 (13) | L |100 (1) |
-#### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of augmentation data set is 100-11=89.  
+#### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 100-11=89.  
 ## Citation
 Sihua Peng, Ming Zhang. HIV-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
 ## Contact
