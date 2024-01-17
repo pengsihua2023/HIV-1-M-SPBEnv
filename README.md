@@ -15,6 +15,11 @@ conda activate HIV-SPBEnv
 
 pip install -r requirements.txt  
 
+## Usage For AI Researchers
+You can run it from the command line
+
+feature extract:
+
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
