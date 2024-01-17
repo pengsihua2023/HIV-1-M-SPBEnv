@@ -19,7 +19,8 @@ pip install -r requirements.txt
 You can run it from the command line
 
 feature extract:
-
+    cd ./DeepmRNALoc
+    python extract_feature.py
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
