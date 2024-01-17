@@ -31,7 +31,8 @@ HIV-SPBEnv was trained by using the original dataset (Table 1) plus the augmenta
 ## The data sets
 ### The original dataset
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1. For this data set, the sample size of some subtypes is too small, and there are only 2-5 samples in 4 subtypes. It is obviously impossible to build a machine learning model on such data. Then the only way is to find ways to increase the sample size for the small sample size subtypes.  
-     
+### The augmentation dataset
+The DNA sequence sample synthesis of env gene adopts molecular evolution method, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and env gene large fragment recombination.  
 ### Table 1 The original data set of the 12 subtypes of HIV env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
