@@ -24,7 +24,7 @@ You can run it from the command line
 ## Usage For Biomedical Researchers
 We deployed a trained model on a dedicated server, which is publicly available at http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.
 
-Users can upload their mRNA sequences to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.
+Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.
 
 HIV-SPBEnv is a project for HIV 1 subtype classification.
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1.
