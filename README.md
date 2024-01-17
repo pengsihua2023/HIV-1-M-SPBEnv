@@ -1,7 +1,7 @@
 # HIV-SPBEnv
 ## Requirements
 Python == 3.9.18   
-torch == 2.1.0+cu121
+torch == 2.1.0+cu121  
 torchvision ==  0.16.0+cu121  
 scikit-learn == 1.3.2  
 pandas == 2.1.2  
