@@ -31,7 +31,8 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 
 
 
-
+## The data sets
+### The original dataset
 ### Table 1 The original data set of the 12 subtypes of HIV env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
@@ -41,6 +42,7 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | C | 1,717 | J |5 |
 | D | 145 | K |2|
 | F1 | 73 | L |3 |
+### The Training data set
 ### Table 2 The training data set for model training after augmentation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
@@ -50,6 +52,7 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | C | 500 | J |500 |
 | D | 500 | K |500|
 | F1 | 500 | L |500 |
+### The evaluation data set
 ### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
