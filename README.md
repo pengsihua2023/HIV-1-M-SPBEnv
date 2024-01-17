@@ -43,7 +43,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | D | 145 | K |2|
 | F1 | 73 | L |3 |
 ### The Training dataset
-### Table 2 The training data set for model training after augmentation.  
+### Table 2 The training data set for model training after data synthesis.  
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
 | A1 | 500 (300)* | F2 |500 (10) |
