@@ -63,3 +63,9 @@ The detailed composition of the DNA sequence data of HIV env gene is shown in Ta
 | D | 100 (25) | K |100 (1)|
 | F1 | 100 (13) | L |100 (1) |
 #### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of augmentation data set is 100-11=89.  
+## Citation
+Sihua Peng, Ming Zhang. HIV-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
+## Contact
+If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu) or Ming Zhang (Email: mzhang01@uga.edu).    
+
+Pull requests are highly welcomed!  
