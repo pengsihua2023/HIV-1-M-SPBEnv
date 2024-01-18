@@ -39,6 +39,7 @@ Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains fo
 ## 5. Model training and model evaluation
     cd ./HIV-SPBEnv  
     python SPBEnv_Conv_Autoencoder_Attention_final.py 
+#### After model training and evaluation are completed, the accuracy based on independent test data will be displayed on the screen, and the model file "HIV-SPBEnv.pth" will be saved in the current directory.  
 ## 6. Results
 HIV-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3).
 ## 7. Model deployment
