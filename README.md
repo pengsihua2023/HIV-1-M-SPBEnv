@@ -40,7 +40,7 @@ Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains fo
     python SPBEnv_Conv_Autoencoder_Attention_final.py 
 ## 6. Results
 HIV-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3).
-## 7.Model deployment
+## 7. Model deployment
 We deployed a trained model on a dedicated server, which is publicly available at:  
 http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
 Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.   
