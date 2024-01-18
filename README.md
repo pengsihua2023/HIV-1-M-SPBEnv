@@ -35,6 +35,8 @@ Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains fo
 ### 4.5 obtain the recombination mutation
 Before performing the recombination operation, the sequence in fasta format should be multple-aligned by a Multiple Sequence Alignment softwae such as MUSCLE.　　
     cd ./HIV-SPBEnv  
+    python synonymous_mutations_batch_final.py 
+    cd ./HIV-SPBEnv  
     python generate_sample_by_recombination_batch_final.py
 ### 4.６　How can we prove that our synthetic samples are reliable?　　
 By combining synthetic samples and gold standard classification samples to make an evolutionary tree, we can prove from one aspect that our data is credible. On the other hand, we will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, we use an independent test data set to verify our results again.　　
