@@ -15,12 +15,27 @@ conda create -n HIV-SPBEnv python=3.9.18
 conda activate HIV-SPBEnv  
 
 pip install -r requirements.txt  
+
+## Model training and model evaluation
+
 ## Model architecture of HIV-SPBEnv deep learning classifier  
 ![Model architecture of HIV-SPBEnv](images/env-arc.png)  
 Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains four CNN blocks, with each CNN block consisting of two CNN layers. The BiLSTM module consists of two BiLSTM layers. The FCN module consists of four fully connected neural network layers.  
-## Usage For AI Researchers
-You can run it from the command line  
-
+## Usage For AI Researchers （command line operations）
+## genetic operation for DNA sequence mutation
+### obtain the deletion mutation
+    cd ./HIV-SPBEnv  
+    python extract_feature.py 
+### obtain the insertion mutation
+    cd ./HIV-SPBEnv  
+    python extract_feature.py 
+### obtain the nonsynonymous mutation
+    cd ./HIV-SPBEnv  
+    python extract_feature.py 
+### obtain the synonymous mutation
+    cd ./HIV-SPBEnv  
+    python extract_feature.py 
+### obtain the recombination mutation
     cd ./HIV-SPBEnv  
     python extract_feature.py  
 
