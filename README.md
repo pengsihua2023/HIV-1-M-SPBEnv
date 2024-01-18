@@ -19,24 +19,25 @@ pip install -r requirements.txt
 ## 3. Model architecture of HIV-SPBEnv deep learning classifier  
 ![Model architecture of HIV-SPBEnv](images/env-arc.png)  
 Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains four CNN blocks, with each CNN block consisting of two CNN layers. The BiLSTM module consists of two BiLSTM layers. The FCN module consists of four fully connected neural network layers.  
-## 4. Model training and model evaluation （command line operations）
-### 4.1 genetic operation for DNA sequence mutation
-#### 4.1.1 obtain the deletion mutation
+## 4. Genetc operations for mutated env gene samples
+### 4.1 obtain the deletion mutation
     cd ./HIV-SPBEnv  
-    python extract_feature.py 
-#### 4.1.2 obtain the insertion mutation
+    python deletion of amino_acid_sequences_final.py 
+### 4.2 obtain the insertion mutation
     cd ./HIV-SPBEnv  
-    python extract_feature.py 
-#### 4.1.3 obtain the nonsynonymous mutation
+    python insertion_of_amino_acid_sequences_final.py 
+### 4.3 obtain the nonsynonymous mutation
     cd ./HIV-SPBEnv  
-    python extract_feature.py 
-#### 4.1.4 obtain the synonymous mutation
+    python nonsynonymous_mutations_final.py 
+### 4.4 obtain the synonymous mutation
     cd ./HIV-SPBEnv  
-    python extract_feature.py 
-#### 4.1.5 obtain the recombination mutation
+    python synonymous_mutations_batch_final.py 
+### 4.5 obtain the recombination mutation
     cd ./HIV-SPBEnv  
-    python extract_feature.py  
-
+    python generate_sample_by_recombination_batch_final.py
+## 5. Model training and model evaluation
+    cd ./HIV-SPBEnv  
+    python SPBEnv_Conv_Autoencoder_Attention_final.py  
 ## Usage For Biomedical Researchers
 We deployed a trained model on a dedicated server, which is publicly available at:  
 http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
