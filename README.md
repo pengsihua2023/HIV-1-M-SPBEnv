@@ -10,30 +10,30 @@ numpy == 1.24.1
 matplotlib == 3.8.0  
 biopython == 1.79  
 
-### Dependencies can be installed using the following command:
+## 2. Dependencies can be installed using the following command:
 conda create -n HIV-SPBEnv python=3.9.18  
 conda activate HIV-SPBEnv  
 
 pip install -r requirements.txt  
 
-## 2. Model architecture of HIV-SPBEnv deep learning classifier  
+## 3. Model architecture of HIV-SPBEnv deep learning classifier  
 ![Model architecture of HIV-SPBEnv](images/env-arc.png)  
 Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains four CNN blocks, with each CNN block consisting of two CNN layers. The BiLSTM module consists of two BiLSTM layers. The FCN module consists of four fully connected neural network layers.  
-## 3. Model training and model evaluation （command line operations）
-### 3.1 genetic operation for DNA sequence mutation
-#### 3.1.1 obtain the deletion mutation
+## 4. Model training and model evaluation （command line operations）
+### 4.1 genetic operation for DNA sequence mutation
+#### 4.1.1 obtain the deletion mutation
     cd ./HIV-SPBEnv  
     python extract_feature.py 
-#### 3.1.2 obtain the insertion mutation
+#### 4.1.2 obtain the insertion mutation
     cd ./HIV-SPBEnv  
     python extract_feature.py 
-#### 3.1.3 obtain the nonsynonymous mutation
+#### 4.1.3 obtain the nonsynonymous mutation
     cd ./HIV-SPBEnv  
     python extract_feature.py 
-#### 3.1.4 obtain the synonymous mutation
+#### 4.1.4 obtain the synonymous mutation
     cd ./HIV-SPBEnv  
     python extract_feature.py 
-#### 3.1.5 obtain the recombination mutation
+#### 4.1.5 obtain the recombination mutation
     cd ./HIV-SPBEnv  
     python extract_feature.py  
 
