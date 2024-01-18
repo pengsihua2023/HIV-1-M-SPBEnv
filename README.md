@@ -33,9 +33,8 @@ Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains fo
     cd ./HIV-SPBEnv  
     python synonymous_mutations_batch_final.py 
 ### 4.5 obtain the recombination mutation
-### Before performing the recombination operation, the sequence in fasta format should be multple-aligned by a Multiple Sequence Alignment softwae such as MUSCLE.　　
-    cd ./HIV-SPBEnv  
-    python synonymous_mutations_batch_final.py 
+Before performing the recombination operation, the sequence in fasta format should be multple-aligned by a Multiple Sequence Alignment softwae such as MUSCLE.  　　
+
     cd ./HIV-SPBEnv  
     python generate_sample_by_recombination_batch_final.py
 ### 4.６　How can we prove that our synthetic samples are reliable?　　
