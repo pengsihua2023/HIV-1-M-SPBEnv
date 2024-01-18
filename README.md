@@ -37,13 +37,13 @@ Figure 1. An illustration of HIV-SPBEnv architecture. The CNN module contains fo
     python generate_sample_by_recombination_batch_final.py
 ## 5. Model training and model evaluation
     cd ./HIV-SPBEnv  
-    python SPBEnv_Conv_Autoencoder_Attention_final.py  
-## 6.Usage For Biomedical Researchers
+    python SPBEnv_Conv_Autoencoder_Attention_final.py 
+## 6. Results
+HIV-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3).
+## 7.Model deployment
 We deployed a trained model on a dedicated server, which is publicly available at:  
 http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
 Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.   
-## 7. Results
-HIV-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3).
 ## 8. The data sets
 ### 8.1 The original dataset
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1. For this data set, the sample size of some subtypes is too small, and there are only 2-5 samples in 4 subtypes. It is obviously impossible to build a machine learning model on such data. Then the only way is to find ways to increase the sample size for the small sample size subtypes.  
