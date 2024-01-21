@@ -209,7 +209,7 @@ plt.ylabel('Loss')
 plt.title('Training Loss Over Time')
 plt.show()
 
-# 模型评估
+# Model evaluation
 model.eval()
 with torch.no_grad():
     test_inputs = X_test.clone().detach().to(device).to(torch.float32)
