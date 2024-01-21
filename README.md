@@ -38,7 +38,7 @@ Before performing the recombination operation, the sequence in fasta format shou
     cd ./HIV-SPBEnv  
     python generate_sample_by_recombination_batch_final.py
 ### 4.６　How can we prove that our synthetic samples are reliable? 　　
-We randomly selected 5 L synthetic samples from the 500 synthesized L samples, and jointly constructed a phylogenetic tree with 42 gold standard samples of 12 subtypes of HIV type 1. The results show (Figure 2) that the synthesized L samples and The gold standard L sample is completely clustered together.. On the other hand, we will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, we use an independent test data set to verify our results again.　  
+We randomly selected 5 L synthetic samples from the 500 synthesized L samples, and jointly constructed a phylogenetic tree with 42 gold standard samples of 12 subtypes of HIV type 1. The results show (Figure 2) that the synthesized L samples and the gold standard L sample were completely clustered together. On the other hand, we will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, we use an independent test data set to verify our results again.　  
 ![synthetic Sample H Tree](images/image-L-5-synthetic.png)    
 **Figure 2.** Marked in green are the 5 synthetic L samples clustered together with the L samples in the gold standard (in red), showing that the synthetic samples are potential L samples.    
 ## 5. Model training and model evaluation 
