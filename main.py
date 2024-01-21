@@ -1,4 +1,4 @@
-#Author: Sihua Peng, PhD
+#Author: Sihua Peng, PhD, Department of Epidemiology & Biostatistics, College of Public Health, University of Georgia.
 import numpy as np
 import pandas as pd
 import torch
