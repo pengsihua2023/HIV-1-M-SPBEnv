@@ -1,5 +1,19 @@
 # HIV-SPBEnv  
-HIV-SPBEnv is a project for HIV 1 subtype classification.  
+The Human Immunodeficiency Virus, also known as HIV, is a retrovirus that causes deficiencies in the human immune system. This virus attacks and gradually destroys the human immune system, leaving the host unprotected during infection. People who are infected with HIV and pass away often die from secondary infections or cancer. AIDS is the final stage of HIV infection.
+
+There are two main types of the AIDS virus: HIV-1 and HIV-2. HIV-1 originated in the area around the Congo Basin in Africa and is the most prevalent strain globally. It is responsible for about 95% of all HIV infections. HIV-2 is primarily found in West Africa, although it also affects a small number of people in Europe, India, and the United States.
+
+HIV-1 can be further divided into 12 subtypes, namely A1, A2, B, C, D, F1, F2, G, H, J, K, and L. The formation of various subtypes is the result of the continuous molecular evolution of HIV-1. Correctly classifying subtypes is of great importance for vaccine design, therapeutic medication, and effective global community prevention and control of AIDS.
+
+In the past, homology searches in the NCBI database were used to determine subtypes, and their accuracy depended on the judgment level of the searcher, sometimes even making correct judgment impossible. People have also developed typing tools based on statistical modeling methods, but due to the small sample size of several subtypes, the results are sometimes dubious. Therefore, we have developed a method based on deep learning, which we named HIV-SPBEnv.
+
+To address the issue of samples being scarce for some subtypes, we successfully used artificial genetic mutation methods to synthesize new machine learning samples, thereby cleverly solving the problem of insufficient samples for some subtypes.
+
+We found that due to the rapid evolution rate of the env gene, we chose to model the env gene sequence samples for the classification of HIV-1 subtypes.
+
+In our deep learning model framework, we use the Kmer method to vectorize DNA sequences; we use a three-layer dilated convolution module to initially extract features of the DNA sequence. Then, we use an Autoencoder to further extract high-dimensional feature information of the env gene sequence, supplemented by an Self Attention mechanism to extract features from the encoder output, and finally, we use a three-layer fully connected layer to classify the 12 subtypes. For the complete model architecture and main parameters, please see Figure1.
+
+Using an independent validation dataset, the accuracy of HIV-SPBEnv reached 100%, demonstrating strong model generalization capabilities. The trained model is deployed at http://www.peng-lab.org:5000/.    
 ## 1. Requirements
 Python == 3.9.18    
 torch == 2.1.0+cu121  
