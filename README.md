@@ -17,7 +17,7 @@ conda activate HIV-SPBEnv
 pip install -r requirements.txt  
 
 ## 3. Model architecture of HIV-SPBEnv deep learning classifier  
-![Model architecture of HIV-SPBEnv](images/arctecture-network.png)  
+![Model architecture of HIV-SPBEnv](images/arctecture-HIV-SPBEnv.png)  
 **Figure 1.** An illustration of HIV-SPBEnv architecture.      
 ## 4. Genetc operations for mutated env gene samples
 ### 4.1 obtain the deletion mutation
