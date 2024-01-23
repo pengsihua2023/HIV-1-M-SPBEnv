@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ## 4. Genetc operations for mutated env gene samples
 ### 4.1 obtain the deletion mutation
     cd ./HIV-SPBEnv  
-    python deletion of amino_acid_sequences_final.py 
+    python deletion_of_amino_acid_sequences_final.py 
 ### 4.2 obtain the insertion mutation
     cd ./HIV-SPBEnv  
     python insertion_of_amino_acid_sequences_final.py 
