@@ -3,7 +3,7 @@ The Human Immunodeficiency Virus, also known as HIV, is a retrovirus that causes
 
 There are two main types of the AIDS virus: HIV-1 and HIV-2. HIV-1 originated in the area around the Congo Basin in Africa and is the most prevalent strain globally. It is responsible for about 95% of all HIV infections. HIV-2 is primarily found in West Africa, although it also affects a small number of people in Europe, India, and the United States.
 
-HIV-1 can be further divided into 12 subtypes, namely A1, A2, B, C, D, F1, F2, G, H, J, K, and L. The formation of various subtypes is the result of the continuous molecular evolution of HIV-1. Correctly classifying subtypes is of great importance for vaccine design, therapeutic medication, and effective global community prevention and control of AIDS.
+HIV-1 can be divided into 4 groups: M, N, O and P, and Group M is the most widely distributed worldwide, which is divided into 12 different subtypes or sub-subtypes, namely A1, A2, B, C, D, F1, F2, G, H, J, K, and L. The formation of various subtypes or sub-subtypes of HIV-1 group M is the result of continuous molecular evolution. Correct classification of subtypes or sub-subtypes is important for vaccine design, therapeutic drugs, and effective prevention and control of AIDS in the global community.
 
 In the past, homology searches in the NCBI database were used to determine subtypes, and their accuracy depended on the judgment level of the searcher, sometimes even making correct judgment impossible. People have also developed typing tools based on statistical modeling methods, but due to the small sample size of several subtypes, the results are sometimes dubious. Therefore, we have developed a method based on deep learning, which we named HIV-SPBEnv.
 
