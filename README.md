@@ -9,7 +9,7 @@ In the past, homology searches in the NCBI database were used to determine subty
 
 To address the issue of samples being scarce for some subtypes, we successfully used artificial genetic mutation methods to synthesize new machine learning samples, thereby cleverly solving the problem of insufficient samples for some subtypes.
 
-We found that due to the rapid evolution rate of the env gene, we chose to model the env gene sequence samples for the classification of HIV-1 subtypes.
+Due to the rapid evolution rate of the env gene, we chose to model the env gene sequence samples for the classification of HIV-1 subtypes. We download env gene sequences at the HIV Sequence Database supported by Los Alamos National Laboratory ([https://www.hiv.lanl.gov/content/index](https://www.hiv.lanl.gov/content/sequence/HIV/mainpage.html))
 
 In our deep learning model framework, we use the Kmer method to vectorize DNA sequences; we use a three-layer dilated convolution module to initially extract features of the DNA sequence. Then, we use an Autoencoder to further extract high-dimensional feature information of the env gene sequence, supplemented by an Self Attention mechanism to extract features from the encoder output, and finally, we use a three-layer fully connected layer to classify the 12 subtypes. For the complete model architecture and main parameters, please see Figure1.
 
