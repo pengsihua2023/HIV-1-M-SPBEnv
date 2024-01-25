@@ -5,7 +5,7 @@ There are two main types of the AIDS virus: HIV-1 and HIV-2. HIV-1 originated in
 
 HIV-1 can be divided into 4 groups: M, N, O and P, and Group M is the most widely distributed worldwide, which is divided into 12 different subtypes or sub-subtypes, namely A1, A2, B, C, D, F1, F2, G, H, J, K, and L. The formation of various subtypes or sub-subtypes of HIV-1 group M is the result of continuous molecular evolution. Correct classification of subtypes or sub-subtypes is important for vaccine design, therapeutic drugs, and effective prevention and control of AIDS in the global community.
 
-Precise M subtype or sub-subtype classification relies on phylogenetic analysis of specific gene sequences. In the past, subtypes were roughly determined through homologous searches in the NCBI database. The accuracy depended on the searcher's judgment level, and sometimes even the correct judgment could not be made. Classification of HIV-1 subtype based on statistical modeling methods has also been developed, but due to the small sample size of some subtypes, this has caused great limitations in the tools derived from statistical modeling. Therefore, we developed a deep learning-based method, which we named HIV-SPBEnv.  
+Precise M subtype or sub-subtype classification relies on phylogenetic analysis of specific gene sequences. In the past, subtypes were roughly determined through homologous searches in the NCBI database. The accuracy depended on the searcher's judgment level, and sometimes even the correct judgment could not be made. Classification of HIV-1 subtype based on statistical modeling methods has also been developed, but due to the small sample size of some subtypes, this has caused great limitations in the tools derived from statistical modeling. Therefore, we developed a deep learning-based method, which we named HIV-1-M-SPBEnv.  
 
 To address the issue of samples being scarce for some subtypes, we successfully used artificial genetic mutation methods to synthesize new machine learning samples, thereby cleverly solving the problem of insufficient samples for some subtypes.
 
@@ -13,7 +13,7 @@ Due to the rapid evolution rate of the env gene, we chose to model the env gene 
   
 In our deep learning model framework, we use the Kmer method to vectorize DNA sequences; we use a three-layer dilated convolution module to initially extract features of the DNA sequence. Then, we use an Autoencoder to further extract high-dimensional feature information of the env gene sequence, supplemented by an Self Attention mechanism to extract features from the encoder output, and finally, we use a three-layer fully connected layer to classify the 12 subtypes. For the complete model architecture and main parameters, please see Figure1.
 
-Using an independent validation dataset, the accuracy of HIV-SPBEnv reached 100%, demonstrating strong model generalization capabilities. The trained model is deployed at http://www.peng-lab.org:5000/.    
+Using an independent validation dataset, the accuracy of HIV-1-M-SPBEnv reached 100%, demonstrating strong model generalization capabilities. The trained model is deployed at http://www.peng-lab.org:5000/.    
 ## 1. Requirements
 Python == 3.9.18    
 torch == 2.1.0+cu121  
@@ -25,23 +25,23 @@ matplotlib == 3.8.0
 biopython == 1.79  
 
 ## 2. Dependencies can be installed using the following command:
-conda create -n HIV-SPBEnv python=3.9.18  
-conda activate HIV-SPBEnv  
+conda create -n HIV-1-M-SPBEnv python=3.9.18  
+conda activate HIV-1-M-SPBEnv  
 
 pip install -r requirements.txt  
 
-## 3. Model architecture of HIV-SPBEnv deep learning classifier  
-![Model architecture of HIV-SPBEnv](images/arctecture-HIV-SPBEnv.png)  
-**Figure 1.** An illustration of HIV-SPBEnv architecture.      
+## 3. Model architecture of HIV-1-M-SPBEnv deep learning classifier  
+![Model architecture of HIV-1-M-SPBEnv](images/arctecture-HIV-SPBEnv.png)  
+**Figure 1.** An illustration of HIV-1-M-SPBEnv architecture.      
 ## 4. Genetc operations for mutated env gene samples
 ### 4.1 obtain the deletion mutation
-    cd ./HIV-SPBEnv  
+    cd ./HIV-1-M-SPBEnv  
     python deletion_of_amino_acid_sequences_final.py 
 ### 4.2 obtain the insertion mutation
-    cd ./HIV-SPBEnv  
+    cd ./HIV-1-M-SPBEnv  
     python insertion_of_amino_acid_sequences_final.py 
 ### 4.3 obtain the nonsynonymous mutation
-    cd ./HIV-SPBEnv  
+    cd ./HIV-1-M-SPBEnv  
     python nonsynonymous_mutations_final.py 
 ### 4.4 obtain the synonymous mutation
     cd ./HIV-SPBEnv  
@@ -106,7 +106,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | F1 | 100 (13) | L |100 (1) |
 #### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 100-11=89.  
 ## 9. Citation
-Sihua Peng, Ming Zhang. HIV-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
+Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
 ## 10. Contact
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu) or Ming Zhang (Email: mzhang01@uga.edu).    
 
