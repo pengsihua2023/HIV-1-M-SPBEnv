@@ -71,7 +71,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 #### Table 2 The training data set for model training after data synthesis.  
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 500 (300)* | F2 |500 (10) |
+| A1 | 500 (300)* | F2 |500 (12) |
 | A2 | 500 (4) | G |500 (120) |
 | B | 500 (500) | H |500 (8) |
 | C | 500 (500) | J |500 (4) |
@@ -82,10 +82,10 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 #### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 100 (11)** | F2 |100 (6) |
+| A1 | 100 (11)** | F2 |100 (4) |
 | A2 | 100 (1) | G |100 (16) |
-| B | 100 (100) | H |100 (2) |
-| C | 100 (100) | J |100 (1) |
+| B | 2,387 (2,387) | H |100 (2) |
+| C | 1,217 (1,217) | J |100 (1) |
 | D | 100 (25) | K |100 (1)|
 | F1 | 100 (13) | L |100 (1) |
 #### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 100-11=89.  
