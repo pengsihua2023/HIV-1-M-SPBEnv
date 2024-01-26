@@ -1,5 +1,4 @@
 # After obtaining synonymous mutations, non-synonymous mutations, insertion mutations, and deletion mutations in the previous step, perform a two-column data swap to implement the mutation operation.
-#Tubian_Caozuo-batch.py
 # Function: Swap two columns of data to implement mutation operation
 # Author: Sihua Peng, PhD
 import csv
