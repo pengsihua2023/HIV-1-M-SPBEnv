@@ -1,3 +1,5 @@
+# Find one of the synonymous mutations (only one of multiple synonymous mutations is recorded) and write it into
+# the third column of the csv file (the first column is the sequence number, and the second column is the original codon base).
 import csv
 
 def find_synonymous_mutations(input_file, output_file):
