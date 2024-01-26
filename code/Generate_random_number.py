@@ -1,3 +1,4 @@
+# Generate random numbers
 import random
 import csv
 
