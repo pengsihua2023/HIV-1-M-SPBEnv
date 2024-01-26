@@ -1,3 +1,5 @@
+# Determine whether the sequence is an open reading frame, that is, the first three bases are the start codons, 
+# the last three bases are the stop codons, and whether the middle DNA sequence encodes amino acids according to the triplet code.
 from Bio import SeqIO
 
 def is_start_codon(seq):
