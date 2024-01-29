@@ -76,7 +76,8 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | B | 500 (500) | H |500 (8) |
 | C | 500 (500) | J |500 (4) |
 | D | 500 (120) | K |500 (1)|
-| F1 | 500 (60) | L |500 (2) |
+| F1 | 500 (60) | L |500 (2) |  
+
 #### * 500 (300): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 500-300=200.  
 ### 9.4 The independent evaluation dataset
 #### Table 3 The Independent testing data set for model evaluation＊.
