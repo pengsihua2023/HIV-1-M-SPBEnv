@@ -79,7 +79,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | F1 | 500 (60) | L |500 (2) |
 #### * 500 (300): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 500-300=200.  
 ### 9.4 The independent evaluation dataset
-#### Table 3 The Independent testing data set for model evaluation.
+#### Table 3 The Independent testing data set for model evaluation＊.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
 | A1 | 11 | F2 |4 |
@@ -88,7 +88,7 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | C | 1,217 | J |1 |
 | D | 25 | K |1|
 | F1 | 13 | L |100 1 |
-#### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 100-11=89.  
+＊All the independent testting dataset is from the original dataset.    
 ## 10. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
 ## 11. Contact
