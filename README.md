@@ -82,12 +82,12 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 #### Table 3 The Independent testing data set for model evaluation.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 100 (11)** | F2 |100 (4) |
-| A2 | 100 (1) | G |100 (16) |
-| B | 2,387 (2,387) | H |100 (2) |
-| C | 1,217 (1,217) | J |100 (1) |
-| D | 100 (25) | K |100 (1)|
-| F1 | 100 (13) | L |100 (1) |
+| A1 | 11 | F2 |4 |
+| A2 | 1 | G |16 |
+| B | 2,387 | H |2 |
+| C | 1,217 | J |1 |
+| D | 25 | K |1|
+| F1 | 13 | L |100 1 |
 #### ** 100 (11): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 100-11=89.  
 ## 10. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
