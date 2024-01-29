@@ -82,6 +82,13 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 #### Table 3 The Independent testing data set for model evaluation＊.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
+| A1 | 311 | F2 |16 |
+| A2 | 5 | G |136 |
+| B | 2,887 | H |10 |
+| C | 1,717 | J |5 |
+| D | 145 | K |2|
+| F1 | 73 | L |3 |
+  
 | A1 | 11 | F2 |4|
 | A2 | 1 | G |16|
 | B | 2,387 | H |2|
