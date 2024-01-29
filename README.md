@@ -85,16 +85,9 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 | A1 | 11 | F2 |4 |
 | A2 | 1 | G |16 |
 | B | 2,387 | H |2 |
-| C | 1,217 | J |5 |
+| C | 1,217 | J |1 |
 | D | 25 | K |1|
 | F1 | 13 | L |1 |
-  
-| A1 | 11 | F2 |4|
-| A2 | 1 | G |16|
-| B | 2,387 | H |2|
-| C | 1,217 | J |1|
-| D | 25 | K |1|
-| F1 | 13 | L |100 1|
 ＊All the independent testting dataset is from the original dataset.    
 ## 10. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: Type 1 HIV/AIDS 12 subtype prediction based on Autoencoder network with self-attention and a new DNA sequence data augmentation strategy. (Manuscript to be submitted)  
