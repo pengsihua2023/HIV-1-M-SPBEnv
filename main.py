@@ -230,7 +230,7 @@ for epoch in range(num_epochs):
 # Draw a loss curve
 plt.plot(range(num_epochs), train_losses, color='green', label='Train Loss')
 plt.plot(range(num_epochs), test_losses, color='red', label='Test Loss')
-plt.plot(range(num_epochs), test_accuracies, color='black', label='Test Accuracy')  # 添加测试精度曲线
+plt.plot(range(num_epochs), test_accuracies, color='black', label='Test Accuracy') 
 plt.xlabel('Epochs')
 plt.ylabel('Loss/Accuracy')
 plt.title('Training and Test Loss and Accuracy Over Time')
