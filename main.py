@@ -145,9 +145,6 @@ class DeepModel(nn.Module):
         x = self.fc3(x)
         return x
 
-
-
-# Custom data set class
 # Custom data set class
 class CustomDataset(Dataset):
     def __init__(self, features, labels):
@@ -160,7 +157,6 @@ class CustomDataset(Dataset):
     def __getitem__(self, idx):
         return self.features[idx], self.labels[idx]
 
-# data preparation
 # Data preparation
 batch_size = 32
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -181,7 +177,6 @@ train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
 test_dataset = CustomDataset(X_test, y_test)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
 
 # Model initialization and training
 input_dim = feature_dim
