@@ -156,6 +156,7 @@ class CustomDataset(Dataset):
     def __getitem__(self, idx):
         return self.features[idx], self.labels[idx]
 
+# data preparation
 # Data preparation
 batch_size = 32
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -177,15 +178,18 @@ train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_dataset = CustomDataset(X_test, y_test)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
+
 # Model initialization and training
 input_dim = feature_dim
 num_classes = 12
 model = DeepModel(input_dim, num_classes, ae_hidden_dim).to(device)
 print(model)
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.Adam(model.parameters(), lr=0.00001, weight_decay=1e-6)
 criterion = nn.CrossEntropyLoss()
 
-num_epochs = 30
+test_accuracies = []
+
+num_epochs = 100
 train_losses = []
 test_losses = []
 for epoch in range(num_epochs):
@@ -220,18 +224,19 @@ for epoch in range(num_epochs):
 
     train_losses.append(train_loss)
     test_losses.append(test_loss)
-
+    test_accuracies.append(test_accuracy)
     print(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
 
 # Draw a loss curve
 plt.plot(range(num_epochs), train_losses, color='green', label='Train Loss')
 plt.plot(range(num_epochs), test_losses, color='red', label='Test Loss')
+plt.plot(range(num_epochs), test_accuracies, color='black', label='Test Accuracy')  # 添加测试精度曲线
 plt.xlabel('Epochs')
-plt.ylabel('Loss')
-plt.title('Training and Test Loss Over Time')
+plt.ylabel('Loss/Accuracy')
+plt.title('Training and Test Loss and Accuracy Over Time')
 plt.legend()
 plt.show()
 
 # Save model
-model_path = 'HIV-SPBEnv-kd-GPU7-7.pth'
+model_path = 'HIV-SPBEnv-kd-GPU-100f.pth'
 torch.save(model.state_dict(), model_path)
