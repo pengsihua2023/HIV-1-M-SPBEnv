@@ -1,4 +1,3 @@
-#Author: Sihua Peng, PhD, Department of Epidemiology & Biostatistics, College of Public Health, University of Georgia.
 import numpy as np
 import pandas as pd
 import torch
@@ -8,6 +7,7 @@ from torch.utils.data import DataLoader, Dataset
 from sklearn.model_selection import train_test_split
 from Bio import SeqIO
 import matplotlib.pyplot as plt
+
 
 # Check GPU support and set up device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -148,6 +148,7 @@ class DeepModel(nn.Module):
 
 
 # Custom data set class
+# Custom data set class
 class CustomDataset(Dataset):
     def __init__(self, features, labels):
         self.features = features
@@ -160,6 +161,7 @@ class CustomDataset(Dataset):
         return self.features[idx], self.labels[idx]
 
 # data preparation
+# Data preparation
 batch_size = 32
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 X_train = torch.tensor(X_train.astype(np.float32)).unsqueeze(1).to(device)
@@ -173,8 +175,13 @@ ae_hidden_dim = 128
 print("Input feature dimension (input_size):", input_size)
 
 # Create training dataset and loader
+# Create training and validation dataset and loader
 train_dataset = CustomDataset(X_train, y_train)
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+
+test_dataset = CustomDataset(X_test, y_test)
+test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+
 
 # Model initialization and training
 input_dim = feature_dim
@@ -185,41 +192,52 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CrossEntropyLoss()
 
 num_epochs = 30
-losses = []  # Initialize a list that stores the loss for each epoch
+train_losses = []
+test_losses = []
 for epoch in range(num_epochs):
     model.train()
-    total_loss = 0
+    total_train_loss = 0
     for inputs, labels in train_loader:
-        inputs, labels = inputs.to(device), labels.to(device)  # Move data to GPU
-
+        inputs, labels = inputs.to(device), labels.to(device)
         optimizer.zero_grad()
         outputs = model(inputs)
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
-        total_loss += loss.item()
-    average_loss = total_loss / len(train_loader)
-    losses.append(average_loss)  
-    print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {average_loss:.4f}")
+        total_train_loss += loss.item()
+
+    model.eval()
+    total_test_loss = 0
+    total_correct = 0
+    total = 0
+    with torch.no_grad():
+        for inputs, labels in test_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+            total_test_loss += loss.item()
+            _, predicted = torch.max(outputs.data, 1)
+            total_correct += (predicted == labels).sum().item()
+            total += labels.size(0)
+
+    train_loss = total_train_loss / len(train_loader)
+    test_loss = total_test_loss / len(test_loader)
+    test_accuracy = total_correct / total
+
+    train_losses.append(train_loss)
+    test_losses.append(test_loss)
+
+    print(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
 
 # Draw a loss curve
-plt.plot(range(num_epochs), losses)
+plt.plot(range(num_epochs), train_losses, color='green', label='Train Loss')
+plt.plot(range(num_epochs), test_losses, color='red', label='Test Loss')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
-plt.title('Training Loss Over Time')
+plt.title('Training and Test Loss Over Time')
+plt.legend()
 plt.show()
 
-# Model evaluation
-model.eval()
-with torch.no_grad():
-    test_inputs = X_test.clone().detach().to(device).to(torch.float32)
-    test_labels = y_test.clone().detach().to(device).to(torch.int64)
-    test_outputs = model(test_inputs)
-    test_loss = criterion(test_outputs, test_labels)
-    _, predicted_labels = torch.max(test_outputs, 1)
-    accuracy = (predicted_labels == test_labels).sum().item() / len(test_labels)
-    print(f"Test Loss: {test_loss.item():.4f}, Test Accuracy: {accuracy:.4f}")
-
 # Save model
-model_path = 'HIV-SPBEnv-kd-GPU7.pth'
+model_path = 'HIV-SPBEnv-kd-GPU7-7.pth'
 torch.save(model.state_dict(), model_path)
