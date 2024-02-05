@@ -31,7 +31,7 @@ conda activate HIV-1-M-SPBEnv
 pip install -r requirements.txt  
 
 ## 3. Model architecture of HIV-1-M-SPBEnv deep learning classifier  
-![Model architecture of HIV-1-M-SPBEnv](images/arctecture-HIV-1-SPBEnv-0207.png)  
+![Model architecture of HIV-1-M-SPBEnv](images/arctecture-HIV-1-SPBEnv-0208.png)  
 **Figure 1.** An illustration of HIV-1-M-SPBEnv architecture.      
 ## 4. Genetic operations for generating new env gene sequence samples
 We adopted artificial molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and large fragment recombination.  
