@@ -195,9 +195,9 @@ plt.legend(fontsize=18)
 plt.show()
 
 # Save model
-#model_path = 'model-Autoencoder-001tw.pth'
-#torch.save(model.state_dict(), model_path)
-#print(f"Model saved to {model_path}")
+model_path = 'model-Autoencoder.pth'
+torch.save(model.state_dict(), model_path)
+print(f"Model saved to {model_path}")
 
 # Read the validation data set
 validation_sequences = []
