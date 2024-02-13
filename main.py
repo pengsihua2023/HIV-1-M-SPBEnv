@@ -7,6 +7,10 @@ from torch.utils.data import DataLoader, Dataset
 from sklearn.model_selection import train_test_split
 from Bio import SeqIO
 import matplotlib.pyplot as plt
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -31,7 +35,7 @@ sequences = []
 for record in SeqIO.parse('HIV_12-class-new.fasta', 'fasta'):
     sequences.append(str(record.seq))
 
-k = 7
+k = 7 
 feature_dim = 4 ** k
 
 feature_matrix = np.zeros((len(sequences), feature_dim))
@@ -101,7 +105,9 @@ class DeepModel(nn.Module):
         super(DeepModel, self).__init__()
         self.autoencoder = Autoencoder(input_dim, ae_hidden_dim)
         # Ensure the input dimension of self.fc1 layer matches the feature count of encoded_x
-        self.fc1 = nn.Linear(262144, 128)  # Adjusting the input feature number from 128 to 4096
+        #self.fc1 = nn.Linear(262144, 128)  # Adjusting the input feature number from 128 to 4096
+        #self.fc1 = nn.Linear(65536, 128)  # Adjusting the input feature number from 128 to 4096
+        self.fc1 = nn.Linear(4**(k+2), 128)  # Adjusting the input feature number from 128 to 4096
         self.fc2 = nn.Linear(128, 64)
         self.fc3 = nn.Linear(64, num_classes)
 
@@ -120,7 +126,7 @@ class DeepModel(nn.Module):
 
 model = DeepModel(feature_dim, len(label_mapping), 128).to(device)
 print (model)
-optimizer = optim.Adam(model.parameters(), lr=0.00001, weight_decay=1e-6)
+optimizer = optim.Adam(model.parameters(), lr=0.00001, weight_decay=1e-5)
 criterion = nn.CrossEntropyLoss()
 mse_loss = nn.MSELoss()
 
@@ -173,26 +179,92 @@ for epoch in range(num_epochs):
 
     print(f"Epoch [{epoch+1}/{num_epochs}], Total Train Loss: {avg_train_loss:.4f}, Total Test Loss: {avg_test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
 
-# Plot loss and accuracy charts
-plt.figure(figsize=(12, 6))
-plt.subplot(1, 2, 1)
-plt.plot(train_losses, color='green', label='Total Train Loss')
-plt.plot(test_losses, color='red', label='Total Test Loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
-plt.title('Total Train vs Total Test Loss')
-plt.legend()
 
+plt.figure(figsize=(12, 6))
+
+# 对于 Total Train vs Total Test Loss 图
+plt.subplot(1, 2, 1)
+plt.plot(train_losses, color='green', label='Total Train Loss', linewidth=2)  # 增加线条粗细
+plt.plot(test_losses, color='red', label='Total Test Loss', linewidth=3)  # 增加线条粗细
+plt.xlabel('Epoch', fontsize=18)  # 增加字体大小
+plt.ylabel('Loss', fontsize=18)  # 增加字体大小
+plt.title('Total Train vs Total Test Loss', fontsize=18)  # 增加字体大小
+plt.legend(fontsize=16)  # 调整图例的字体大小
+
+# 对于 Test Accuracy 图
 plt.subplot(1, 2, 2)
-plt.plot(test_accuracies, color='blue', label='Test Accuracy')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.title('Test Accuracy')
-plt.legend()
+plt.plot(test_accuracies, color='blue', label='Test Accuracy', linewidth=2)  # 增加线条粗细
+plt.xlabel('Epoch', fontsize=18)  # 增加字体大小
+plt.ylabel('Accuracy', fontsize=18)  # 增加字体大小
+plt.title('Test Accuracy', fontsize=18)  # 增加字体大小
+plt.legend(fontsize=18)  # 调整图例的字体大小
 
 plt.show()
 
 # Save model
-model_path = 'model-Autoencoder-001tw.pth'
-torch.save(model.state_dict(), model_path)
-print(f"Model saved to {model_path}")
+#model_path = 'model-Autoencoder-001tw.pth'
+#torch.save(model.state_dict(), model_path)
+#print(f"Model saved to {model_path}")
+
+
+# 读取验证数据集
+validation_sequences = []
+for record in SeqIO.parse('validation_data-new.fasta', 'fasta'):
+    validation_sequences.append(str(record.seq))
+
+# 创建验证集特征向量
+validation_feature_matrix = np.zeros((len(validation_sequences), feature_dim))
+for i, sequence in enumerate(validation_sequences):
+    validation_feature_matrix[i] = create_feature_vector(sequence, k)
+
+# 读取验证集标签
+validation_labels = pd.read_csv('validation_Label_new3.csv', header=None)  # 假设标签文件没有标题行
+validation_labels = validation_labels.iloc[:, 0].map(label_mapping).values  # 假设标签在第一列
+
+# 转换为Tensor
+validation_features = torch.tensor(validation_feature_matrix.astype(np.float32)).to(device)
+validation_labels = torch.tensor(validation_labels.astype(np.int64)).to(device)
+
+# 评估模型
+model.eval()
+validation_outputs = []
+true_labels = []
+with torch.no_grad():
+    for i in range(0, len(validation_features), 32):  # 假设使用与训练时相同的批处理大小
+        inputs = validation_features[i:i+32].unsqueeze(1)
+        labels = validation_labels[i:i+32]
+        _, _, classification_outputs = model(inputs)
+        _, predicted = torch.max(classification_outputs.data, 1)
+        validation_outputs.extend(predicted.cpu().numpy())
+        true_labels.extend(labels.cpu().numpy())
+
+# 计算指标
+accuracy = accuracy_score(true_labels, validation_outputs)
+recall = recall_score(true_labels, validation_outputs, average='macro')
+precision = precision_score(true_labels, validation_outputs, average='macro')
+f1 = f1_score(true_labels, validation_outputs, average='macro')
+
+print(f"Validation Accuracy: {accuracy}")
+print(f"Validation Recall: {recall}")
+print(f"Validation Precision: {precision}")
+print(f"Validation F1 Score: {f1}")
+
+# 计算混淆矩阵
+cm = confusion_matrix(true_labels, validation_outputs)
+
+class_names = ['A1', 'A2', 'B', 'C', 'D', 'F1', 'F2', 'G', 'H', 'J', 'K', 'L']
+
+
+# 计算混淆矩阵
+cm = confusion_matrix(true_labels, validation_outputs)
+
+# 绘制混淆矩阵
+fig, ax = plt.subplots(figsize=(10, 10))  # 设置图的大小
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_names)
+disp.plot(cmap=plt.cm.Blues, ax=ax)  # 选择颜色主题
+ax.set_xlabel('Predicted label', fontsize=12)  # 设置X轴标题
+ax.set_ylabel('True label', fontsize=12)  # 设置Y轴标题
+plt.title('Confusion Matrix', fontsize=15)  # 设置标题
+plt.xticks(rotation=45)  # 将X轴标签旋转45度以便阅读
+plt.show()
+
