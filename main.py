@@ -10,8 +10,6 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-
-
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -70,7 +68,6 @@ test_dataset = CustomDataset(X_test, y_test)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-
 # Define model
 class Autoencoder(nn.Module):
     def __init__(self, input_dim, ae_hidden_dim):
@@ -99,7 +96,6 @@ class Autoencoder(nn.Module):
         decoded_x = self.decoder(encoded_x)
         return encoded_x, decoded_x
 
-
 class DeepModel(nn.Module):
     def __init__(self, input_dim, num_classes, ae_hidden_dim):
         super(DeepModel, self).__init__()
@@ -121,8 +117,6 @@ class DeepModel(nn.Module):
         x = torch.relu(self.fc2(x))
         classification_output = self.fc3(x)
         return encoded_x, decoded_x, classification_output
-
-
 
 model = DeepModel(feature_dim, len(label_mapping), 128).to(device)
 print (model)
@@ -179,7 +173,6 @@ for epoch in range(num_epochs):
 
     print(f"Epoch [{epoch+1}/{num_epochs}], Total Train Loss: {avg_train_loss:.4f}, Total Test Loss: {avg_test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
 
-
 plt.figure(figsize=(12, 6))
 
 # 对于 Total Train vs Total Test Loss 图
@@ -205,7 +198,6 @@ plt.show()
 #model_path = 'model-Autoencoder-001tw.pth'
 #torch.save(model.state_dict(), model_path)
 #print(f"Model saved to {model_path}")
-
 
 # Read the validation data set
 validation_sequences = []
@@ -251,7 +243,7 @@ print(f"Validation F1 Score: {f1}")
 
 class_names = ['A1', 'A2', 'B', 'C', 'D', 'F1', 'F2', 'G', 'H', 'J', 'K', 'L']
 
-# 计算混淆矩阵
+# Calculate confusion matrix
 cm = confusion_matrix(true_labels, validation_outputs)
 
 # Plot confusion matrix
@@ -263,4 +255,3 @@ ax.set_ylabel('True label', fontsize=12)
 plt.title('Confusion Matrix', fontsize=15)  
 plt.xticks(rotation=45)  
 plt.show()
-
