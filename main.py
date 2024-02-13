@@ -175,7 +175,7 @@ for epoch in range(num_epochs):
 
 plt.figure(figsize=(12, 6))
 
-# 对于 Total Train vs Total Test Loss 图
+# Total Train vs Total Test Loss curve
 plt.subplot(1, 2, 1)
 plt.plot(train_losses, color='green', label='Total Train Loss', linewidth=2)  
 plt.plot(test_losses, color='red', label='Total Test Loss', linewidth=3)  
@@ -184,7 +184,7 @@ plt.ylabel('Loss', fontsize=18)
 plt.title('Total Train vs Total Test Loss', fontsize=18)  
 plt.legend(fontsize=16)  
 
-# 对于 Test Accuracy 图
+# Test Accuracy curve
 plt.subplot(1, 2, 2)
 plt.plot(test_accuracies, color='blue', label='Test Accuracy', linewidth=2)  
 plt.xlabel('Epoch', fontsize=18)  
