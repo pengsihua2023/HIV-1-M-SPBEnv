@@ -98,5 +98,5 @@ If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.
 
 Pull requests are highly welcomed!  
 ## 12. Acknowledgments  
-Thanks to Sapelo2 high performance cluster of the University of Georgia for providing computing infrastructure.  
+We would like to thank Dr. Liming Pu for helpful discussions and suggestions, and Dr. José F. Cordero and Dr. Justin Bahl for their guidance and assistance during project implementation.  
 Thanks to Dr. José F. Cordero and Dr. Justin Bahl for their guidance and help during project implementation and paper writing.  
