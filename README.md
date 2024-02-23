@@ -96,7 +96,4 @@ Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using c
 ## 11. Contact
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu) or Ming Zhang (Email: mzhang01@uga.edu).    
 
-Pull requests are highly welcomed!  
-## 12. Acknowledgments  
-We would like to thank Dr. Liming Pu for helpful discussions and suggestions, and Dr. José F. Cordero and Dr. Justin Bahl for their guidance and assistance during project implementation. 
- 
+Pull requests are highly welcomed!   
