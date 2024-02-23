@@ -94,6 +94,6 @@ We adopted molecular evolution methods for DNA sequence sample synthesis, includ
 ## 10. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using convolutional Autoencoder and full connected neural network. (Manuscript to be submitted)   
 ## 11. Contact
-If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu) or Ming Zhang (Email: mzhang01@uga.edu).    
+If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu)      
 
 Pull requests are highly welcomed!   
