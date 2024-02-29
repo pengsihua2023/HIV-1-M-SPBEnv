@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from HIV-1-M-SPBEnv.version import __version__
+from HIV_1_M_SPBEnv.version import __version__
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -14,14 +14,14 @@ setup(
     url="https://github.com/pengsihua2023/HIV-1-M-SPBEnv",
     author=["Sihua Peng"],
     author_email="Sihua.Peng@uga.edu",
-    packages=["HIV-1-M-SPBEnv"],
+    packages=["HIV_1_M_SPBEnv"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     entry_points={"console_scripts": ["hiv-env=main:run"]},
-    py_modules=["HIV-1-M-SPBEnv"],
+    py_modules=["HIV_1_M_SPBEnv"],
     install_requires=[
         'scikit-learn == 1.3.2',  
     ],
