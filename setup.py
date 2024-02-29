@@ -20,7 +20,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    entry_points={"console_scripts": ["classlog=classlog.ui:main"]},
+    entry_points={"console_scripts": ["hiv-env=main:run"]},
     py_modules=["HIV-1-M-SPBEnv"],
     install_requires=[
         'scikit-learn == 1.3.2',  
