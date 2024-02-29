@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 setup(
     name="HIV-1-M-SPBEnv",
     version=__version__,
-    description="Implementation of logistic regression for classification of sequences based on a reference set",
+    description="HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using convolutional Autoencoder and full connected neural network",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/pengsihua2023/HIV-1-M-SPBEnv",
