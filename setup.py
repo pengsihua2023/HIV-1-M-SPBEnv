@@ -23,7 +23,6 @@ setup(
     entry_points={"console_scripts": ["classlog=classlog.ui:main"]},
     py_modules=["HIV-1-M-SPBEnv"],
     install_requires=[
-        'Python == 3.9.18',
         'scikit-learn == 1.3.2',  
     ],
     zip_safe=False,
