@@ -31,7 +31,7 @@ def create_feature_vector(sequence, k):
     return feature_vector
 
 sequences = []
-for record in SeqIO.parse('./data/HIV_12-class-new.fasta', 'fasta'):
+for record in SeqIO.parse('./data/HIV_12-class.fasta', 'fasta'):
     sequences.append(str(record.seq))
 
 k = 7 
