@@ -39,8 +39,8 @@ cd HIV-1-M-SPBEnv
 pip install .
 ````
 ##Run the HIV-1-M-SPBEnv
-Just excecute the command "hiv-env", in any command line enviroment  
 ````python
+#Just excecute the command "hiv-env" in any command line enviroment. 
 hiv-env
 ````  
 ## Uninstall 
