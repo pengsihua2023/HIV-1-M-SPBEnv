@@ -46,7 +46,7 @@ hiv-env
 ## 5. Results
 After running the "hiv-env" command, the model begins to be trained. After the training is completed, the results shown in Figure 1 are obtained. After manually closing the first graphics window, the results in Figure 2 are obtained, which is a confusion matrix. Finally, after manually closing the second graphics window, the verification parameter values based on the independent verification data set will be output in the command line interface: Accuracy, Recall, Precesion, and F1 Score.  
 
-model file will be saved in current directory named “”“”  
+The model file trained will be saved in current directory named “”“”  
 
 HIV-1-M-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-1-M-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3). Figure 1 shows the model performance during training.  
 ![Loss function curve during training](images/Figure_3-100-N2.png)   
