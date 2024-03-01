@@ -40,7 +40,7 @@ pip install .
 ````
 ## 4. Run the HIV-1-M-SPBEnv
 ````python
-#Just excecute the command "hiv-env" in any command line enviroment. 
+#Just execute the command "hiv-env" in any command line environment. 
 hiv-env
 ````  
 ## 5. Results
