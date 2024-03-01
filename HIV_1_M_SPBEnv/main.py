@@ -195,7 +195,7 @@ plt.legend(fontsize=18)
 plt.show()
 
 # Save model
-model_path = 'model-Autoencoder.pth'
+model_path = 'model-HIV_1_M_SPBEnv.pth'
 torch.save(model.state_dict(), model_path)
 print(f"Model saved to {model_path}")
 
