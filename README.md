@@ -38,6 +38,15 @@ cd HIV-1-M-SPBEnv
 #Install HIV-1-M-SPBEnv
 pip install .
 ````
+##Run the HIV-1-M-SPBEnv
+Just excecute the command "hiv-env", in any command line enviroment  
+````python
+hiv-env
+````  
+## Uninstall 
+````python
+pip uninstall HIV-1-M-SPBEnv
+````
 ## 3. Model architecture of HIV-1-M-SPBEnv deep learning classifier  
 ![Model architecture of HIV-1-M-SPBEnv](images/arctecture-HIV-1-SPBEnv-0213.png)  
 **Figure 1.** An illustration of HIV-1-M-SPBEnv architecture.      
