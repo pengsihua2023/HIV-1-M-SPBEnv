@@ -41,7 +41,7 @@ feature_matrix = np.zeros((len(sequences), feature_dim))
 for i, sequence in enumerate(sequences):
     feature_matrix[i] = create_feature_vector(sequence, k)
 
-labels = pd.read_csv('./data/Labels_1068-12-class.csv')
+labels = pd.read_csv('./data/Labels-12-class.csv')
 label_mapping = {'A1': 0, 'A2': 1, 'B': 2, 'C': 3, 'D': 4, 'F1': 5, 'F2': 6, 'G': 7, 'H': 8, 'J': 9, 'K': 10, 'L': 11}
 labels['Label'] = labels['Label'].map(label_mapping)
 y = labels['Label'].values
@@ -202,7 +202,7 @@ print(f"Model saved to {model_path}")
 
 # Read the validation data set
 validation_sequences = []
-for record in SeqIO.parse('validation_data-new.fasta', 'fasta'):
+for record in SeqIO.parse('./data/validation_data.fasta', 'fasta'):
     validation_sequences.append(str(record.seq))
 
 # Create validation set feature vectors
@@ -211,7 +211,7 @@ for i, sequence in enumerate(validation_sequences):
     validation_feature_matrix[i] = create_feature_vector(sequence, k)
 
 # Read validation set labels
-validation_labels = pd.read_csv('validation_Label_new3.csv', header=None) 
+validation_labels = pd.read_csv('./data/validation_Label.csv', header=None) 
 validation_labels = validation_labels.iloc[:, 0].map(label_mapping).values  
 
 # Convert to Tensor
