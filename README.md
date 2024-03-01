@@ -70,9 +70,9 @@ I deployed a trained model on a dedicated server, which is publicly available at
 http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
 Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.   
 ## 11. The data sets
-### 13.1 The original dataset
+### 11.1 The original dataset
 The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1. For this data set, the sample size of some subtypes is too small, and there are only 2-5 samples in 4 subtypes. It is obviously impossible to build a machine learning model on such data. Then the only way is to find ways to increase the sample size for the small sample size subtypes.  
-### 12.2 The synthetic dataset
+### 11.2 The synthetic dataset
 I adopted molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and env gene large fragment recombination. Synthetic data samples are included in both the model training dataset (Table 2) and the model evaluation dataset (Table 3).    
 #### Table 1 The original data set of HIV-1 M group env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
@@ -83,7 +83,7 @@ I adopted molecular evolution methods for DNA sequence sample synthesis, includi
 | C | 1,717 | J |5 |
 | D | 145 | K |2|
 | F1 | 73 | L |3 |
-### 12.3 The Training dataset
+### 11.3 The Training dataset
 #### Table 2 The dataset for model training.  
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
@@ -95,7 +95,7 @@ I adopted molecular evolution methods for DNA sequence sample synthesis, includi
 | F1 | 500 (60) | L |500 (2) |  
 
 #### * 500 (300): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 500-300=200.  
-### 12.4 The independent evaluation dataset
+### 11.4 The independent evaluation dataset
 #### Table 3 The Independent data set for model evaluation＊.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
@@ -107,9 +107,9 @@ I adopted molecular evolution methods for DNA sequence sample synthesis, includi
 | F1 | 13 | L |1 |
 
 ＊All the independent testting dataset is from the original dataset.    
-## 13. Citation
+## 12. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using convolutional Autoencoder and full connected neural network. (Manuscript to be submitted)   
-## 14. Contact
+## 13. Contact
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu)      
 
 Pull requests are highly welcomed!   
