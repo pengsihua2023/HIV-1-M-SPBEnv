@@ -31,7 +31,7 @@ def create_feature_vector(sequence, k):
     return feature_vector
 
 sequences = []
-for record in SeqIO.parse('HIV_12-class-new.fasta', 'fasta'):
+for record in SeqIO.parse('./data/HIV_12-class-new.fasta', 'fasta'):
     sequences.append(str(record.seq))
 
 k = 7 
@@ -41,7 +41,7 @@ feature_matrix = np.zeros((len(sequences), feature_dim))
 for i, sequence in enumerate(sequences):
     feature_matrix[i] = create_feature_vector(sequence, k)
 
-labels = pd.read_csv('Labels_1068-12-class.csv')
+labels = pd.read_csv('./data/Labels_1068-12-class.csv')
 label_mapping = {'A1': 0, 'A2': 1, 'B': 2, 'C': 3, 'D': 4, 'F1': 5, 'F2': 6, 'G': 7, 'H': 8, 'J': 9, 'K': 10, 'L': 11}
 labels['Label'] = labels['Label'].map(label_mapping)
 y = labels['Label'].values
