@@ -23,7 +23,7 @@ numpy == 1.24.1
 matplotlib == 3.8.0  
 biopython == 1.79  
 
-## 2. Dependencies can be installed using the following command:
+## 2. Dependencies installation
 conda create -n HIV-1-M-SPBEnv python=3.9.18  
 conda activate HIV-1-M-SPBEnv  
 
