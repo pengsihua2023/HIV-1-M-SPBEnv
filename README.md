@@ -49,9 +49,9 @@ After running the "hiv-env" command, the model begins to be trained. After the t
 The trained model file, named "model-HIV_1_M_SPBEnv.pth", will be saved in current directory.  
 
 HIV-1-M-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-1-M-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3). Figure 1 shows the model performance during training.  
-![Loss function curve during training](images/Figure_3-100-N2.png)   
+![Loss function curve during training](images/Figure_1.png)   
 **Figure 1.** Illustration of Model performance. On the left, the figure delineates the relationship between the Total training loss and the Total test loss over a span of 100 epochs. Total train loss and Total test loss are the sums of the model reconstruction loss obtained by training the Autoencoder and the training loss of the classifier, based on the model training data set and the model test data set respectively. On the right, the figure shows the trajectory of classification accuracy during 100 epochs of training based on the test data set.    
-![Confusion matrix](images/Figure_3-100-N2.png)   
+![Confusion matrix](images/Figure_2.png)   
 **Figure 2.** Confusion matrix based on the independent validation data set
 
 ## 6. Uninstall HIV-1-M-SPBEnv
