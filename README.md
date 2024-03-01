@@ -29,6 +29,15 @@ conda activate HIV-1-M-SPBEnv
 
 pip install -r requirements.txt  
 
+## 3. Download and installation of HIV-1-M-SPBEnv
+#Clone the HIV-1-M-SPBEnv repo
+git clone https://github.com/pengsihua2023/HIV-1-M-SPBEnv.git
+cd HIV-1-M-SPBEnv
+
+#Install HIV-1-M-SPBEnv
+pip install .
+
+
 ## 3. Model architecture of HIV-1-M-SPBEnv deep learning classifier  
 ![Model architecture of HIV-1-M-SPBEnv](images/arctecture-HIV-1-SPBEnv-0213.png)  
 **Figure 1.** An illustration of HIV-1-M-SPBEnv architecture.      
