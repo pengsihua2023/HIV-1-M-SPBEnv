@@ -20,8 +20,8 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-    ],
-    entry_points={"console_scripts": "hiv-env=HIV_1_M_SPBEnv.main:run"]},
+    ],    
+    entry_points={"console_scripts": ["hiv-env=HIV_1_M_SPBEnv.main:run"]},
     py_modules=["HIV_1_M_SPBEnv"],
     install_requires=[
         'scikit-learn == 1.3.2',  
