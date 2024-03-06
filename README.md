@@ -23,7 +23,7 @@ numpy == 1.24.1
 matplotlib == 3.8.0  
 biopython == 1.79  
 
-## 2. Create virual enviroment and install Pytorch
+## 2. Create virtual enviroment and install Pytorch
 ````
 conda create -n HIV-1-M-SPBEnv python=3.9.18  
 conda activate HIV-1-M-SPBEnv  
