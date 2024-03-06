@@ -1,3 +1,5 @@
+with open('README.md', 'r', encoding='utf-8') as fh:
+    long_description = fh.read()
 from setuptools import setup
 
 from HIV_1_M_SPBEnv.version import __version__
