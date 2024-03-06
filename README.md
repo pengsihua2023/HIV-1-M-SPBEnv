@@ -23,7 +23,7 @@ numpy == 1.24.1
 matplotlib == 3.8.0  
 biopython == 1.79  
 
-## 2. Dependencies installation
+## 2. Create virual enviroment and install Pytorch
 ````
 conda create -n HIV-1-M-SPBEnv python=3.9.18  
 conda activate HIV-1-M-SPBEnv  
@@ -38,7 +38,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip3 install torch torchvision torchaudio
 
 ````
-## 3. Download and installation of HIV-1-M-SPBEnv
+## 3. Download HIV-1-M-SPBEnv, and install requirements and HIV-1-M-SPBEnv.
 #Clone the HIV-1-M-SPBEnv repo
 ````python
 git clone https://github.com/pengsihua2023/HIV-1-M-SPBEnv.git
