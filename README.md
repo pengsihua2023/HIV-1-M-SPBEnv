@@ -24,11 +24,15 @@ matplotlib == 3.8.0
 biopython == 1.79  
 
 ## 2. Dependencies installation
+````
 conda create -n HIV-1-M-SPBEnv python=3.9.18  
 conda activate HIV-1-M-SPBEnv  
 
-pip install -r requirements.txt  
+pip install -r requirements.txt
+# My GPU Cuda version is 12.3. However the latest version of Cuda compatible with  Pytorch is Cuda 1.21. Please check at https://pytorch.org/ for appropriate installation commands for your computer.  
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121  
 
+````
 ## 3. Download and installation of HIV-1-M-SPBEnv
 #Clone the HIV-1-M-SPBEnv repo
 ````python
