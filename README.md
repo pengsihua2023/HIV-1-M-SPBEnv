@@ -33,7 +33,7 @@ conda activate HIV-1-M-SPBEnv
 
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-# If a GPU card is not avaiable at your computer, please use the following commnand to install Pytorch:
+# If you do not have a GPU card on your computer, please use the following command to install Pytorch:
 
 pip3 install torch torchvision torchaudio
 
