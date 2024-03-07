@@ -31,11 +31,11 @@ conda activate HIV-1-M-SPBEnv
 # My GPU Cuda version is 12.3. However the latest version of Cuda compatible with Pytorch is Cuda 1.21.  
 # Please check at https://pytorch.org/ for appropriate installation commands for your computer.  
 
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 # for windows
 
 # If you do not have a GPU card on your computer, please use the following command to install Pytorch:
 
-pip3 install torch torchvision torchaudio
+pip3 install torch torchvision torchaudio # For windows
 
 ````
 ## 3. Download HIV-1-M-SPBEnv, and install requirements and HIV-1-M-SPBEnv.
