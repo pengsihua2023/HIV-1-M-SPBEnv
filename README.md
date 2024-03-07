@@ -73,7 +73,7 @@ pip uninstall HIV-1-M-SPBEnv
 ````
 ## 7. Genetic operations for generating new env gene sequence samples
 I adopted artificial molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and large fragment recombination.  
-## 8　How can I prove that our synthetic samples are reliable? 　　
+## 8　How can I prove that the synthetic samples are reliable? 　　
 I randomly selected 5 L synthetic samples from the 500 synthesized L samples, and jointly constructed a phylogenetic tree with 42 gold standard samples of 12 subtypes of HIV type 1. The results show (Figure 3) that the synthesized L samples and the gold standard L sample were completely clustered together. On the other hand, I will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, I use an independent test data set to verify our results again.　  
 ![synthetic Sample H Tree](images/image-L-5-synthetic.png)    
 **Figure 3.** Verification of the usability of generated samples. Marked in green are the 5 synthetic L samples which clustered together with the original L samples (in red), showing that the synthetic samples are potential original L samples.      
