@@ -39,7 +39,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip3 install torch torchvision torchaudio 
 
 ````
-## 3. Download HIV-1-M-SPBEnv, and install requirements and HIV-1-M-SPBEnv.
+## 3. Download HIV-1-M-SPBEnv, and install dependencies and HIV-1-M-SPBEnv.
 #Clone the HIV-1-M-SPBEnv repo
 ````python
 git clone https://github.com/pengsihua2023/HIV-1-M-SPBEnv.git
