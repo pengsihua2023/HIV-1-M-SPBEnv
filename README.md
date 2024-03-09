@@ -119,10 +119,12 @@ I adopted molecular evolution methods for DNA sequence sample synthesis, includi
 | D | 25 | K |1|
 | F1 | 13 | L |1 |
 
-＊All the independent testting dataset is from the original dataset.    
-## 11. Citation
+＊All the independent testting dataset is from the original dataset. 
+## 11. License
+HIV-1-M-SPBEnv has a MIT license, as seen in the [LICENSE.md](https://github.com/pengsihua2023/HIV-1-M-SPBEnv/blob/main/LICENSE) file.  
+## 12. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using convolutional Autoencoder and full connected neural network. (Manuscript to be submitted)   
-## 12. Contact
+## 13. Contact
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu)      
 
 Pull requests are highly welcomed!   
