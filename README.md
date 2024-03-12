@@ -79,7 +79,7 @@ I randomly selected 5 L synthetic samples from the 500 synthesized L samples, an
 ![synthetic Sample H Tree](images/image-L-5-synthetic.png)    
 **Figure 3.** Verification of the usability of generated samples. Marked in green are the 5 synthetic L samples which clustered together with the original L samples (in red), showing that the synthetic samples are potential original L samples.  
 
-### By using t-SNE visualzation based on K-merm vectorization
+### 8.2 By using t-SNE visualzation based on K-merm vectorization
 The labeld DNA samples were visualized with t-distributed stochastic neighbor embedding (t-SNE) and each gene sequence
 is represented as a dot in the 2D plot. The DNA data were Vectorized by K-mer method.  
 ![synthetic Sample H Tree](images/Figure_4.png)    
