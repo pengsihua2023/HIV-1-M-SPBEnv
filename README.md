@@ -74,12 +74,16 @@ pip uninstall HIV-1-M-SPBEnv
 ## 7. Genetic operations for generating new env gene sequence samples
 I adopted artificial molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and large fragment recombination. The complete codebase for artificial genetic operations is accessible at the following link: https://github.com/pengsihua2023/HIV-1-M-SPBEnv/tree/main/code  
 ## 8　How can I prove that the synthetic samples are reliable? 　　
+### 8.1 By using unrooted phylogenetic tree  
 I randomly selected 5 L synthetic samples from the 500 synthesized L samples, and jointly constructed a phylogenetic tree with 42 gold standard samples of 12 subtypes of HIV type 1. The results show (Figure 3) that the synthesized L samples and the gold standard L sample were completely clustered together. On the other hand, I will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, I use an independent test data set to verify the results again.　  
 ![synthetic Sample H Tree](images/image-L-5-synthetic.png)    
 **Figure 3.** Verification of the usability of generated samples. Marked in green are the 5 synthetic L samples which clustered together with the original L samples (in red), showing that the synthetic samples are potential original L samples.  
 
+### By using t-SNE visualzation based on K-merm vectorization
+The labeld DNA samples were visualized with t-distributed stochastic neighbor embedding (t-SNE) and each gene sequence
+is represented as a dot in the 2D plot. The DNA data were Vectorized by K-mer method.  
 ![synthetic Sample H Tree](images/Figure_4.png)    
-**Figure 4.** Verification of the usability of generated samples by using t-SNE. 
+**Figure 4.** Verification of the usability of generated samples by using t-SNE. One color represents a category, and each category has 89 samples, including original samples and synthetic samples.
 
 ## 9. Model deployment
 I deployed a trained model on a dedicated server, which is publicly available at:  
