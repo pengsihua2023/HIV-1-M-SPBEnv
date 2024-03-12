@@ -81,7 +81,7 @@ I randomly selected 5 L synthetic samples from the 500 synthesized L samples, an
 
 ### 8.2 By using t-SNE visualzation based on K-mer vectorization
 The labeld DNA samples were visualized with t-distributed stochastic neighbor embedding (t-SNE) and each gene sequence
-is represented as a dot in the 2D plot. The DNA data were Vectorized by K-mer method.  
+is represented as a dot in the 2D plot. The DNA data were vectorized by K-mer method.  
 ![synthetic Sample H Tree](images/Figure_4.png)    
 **Figure 4.** Verification of the usability of generated samples by using t-SNE. One color represents a category, and each category has 89 samples, including original samples and synthetic samples.
 
