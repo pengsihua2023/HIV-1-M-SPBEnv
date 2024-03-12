@@ -76,7 +76,10 @@ I adopted artificial molecular evolution methods for DNA sequence sample synthes
 ## 8　How can I prove that the synthetic samples are reliable? 　　
 I randomly selected 5 L synthetic samples from the 500 synthesized L samples, and jointly constructed a phylogenetic tree with 42 gold standard samples of 12 subtypes of HIV type 1. The results show (Figure 3) that the synthesized L samples and the gold standard L sample were completely clustered together. On the other hand, I will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, I use an independent test data set to verify the results again.　  
 ![synthetic Sample H Tree](images/image-L-5-synthetic.png)    
-**Figure 3.** Verification of the usability of generated samples. Marked in green are the 5 synthetic L samples which clustered together with the original L samples (in red), showing that the synthetic samples are potential original L samples.      
+**Figure 3.** Verification of the usability of generated samples. Marked in green are the 5 synthetic L samples which clustered together with the original L samples (in red), showing that the synthetic samples are potential original L samples.  
+
+![synthetic Sample H Tree](images/Figure_4.png)    
+**Figure 4.** Verification of the usability of generated samples by using t-SNE. 
 
 ## 9. Model deployment
 I deployed a trained model on a dedicated server, which is publicly available at:  
