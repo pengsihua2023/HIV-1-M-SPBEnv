@@ -1,4 +1,4 @@
-## architecture
+## Code
 code: HV-revision-v7.py
 ```
 import numpy as np
