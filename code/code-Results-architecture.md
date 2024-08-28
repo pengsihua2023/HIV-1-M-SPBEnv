@@ -292,30 +292,31 @@ plt.show()
 ```
 ### Results
 ```
-Epoch [1/20], Total Train Loss: 3.6799, Total Test Loss: 3.4359, Test Accuracy: 0.6355
-Epoch [2/20], Total Train Loss: 2.7763, Total Test Loss: 2.0971, Test Accuracy: 1.0000
-Epoch [3/20], Total Train Loss: 1.4946, Total Test Loss: 1.1371, Test Accuracy: 1.0000
-Epoch [4/20], Total Train Loss: 0.8850, Total Test Loss: 0.6510, Test Accuracy: 1.0000
-Epoch [5/20], Total Train Loss: 0.5905, Total Test Loss: 0.5383, Test Accuracy: 1.0000
-Epoch [6/20], Total Train Loss: 0.4860, Total Test Loss: 0.4370, Test Accuracy: 1.0000
-Epoch [7/20], Total Train Loss: 0.3768, Total Test Loss: 0.3161, Test Accuracy: 1.0000
-Epoch [8/20], Total Train Loss: 0.2657, Total Test Loss: 0.2218, Test Accuracy: 1.0000
-Epoch [9/20], Total Train Loss: 0.1922, Total Test Loss: 0.1706, Test Accuracy: 1.0000
-Epoch [10/20], Total Train Loss: 0.1590, Total Test Loss: 0.1502, Test Accuracy: 1.0000
-Epoch [11/20], Total Train Loss: 0.1432, Total Test Loss: 0.1384, Test Accuracy: 1.0000
-Epoch [12/20], Total Train Loss: 0.1350, Total Test Loss: 0.1333, Test Accuracy: 1.0000
-Epoch [13/20], Total Train Loss: 0.1316, Total Test Loss: 0.1311, Test Accuracy: 1.0000
-Epoch [14/20], Total Train Loss: 0.1300, Total Test Loss: 0.1297, Test Accuracy: 1.0000
-Epoch [15/20], Total Train Loss: 0.1288, Total Test Loss: 0.1289, Test Accuracy: 1.0000
-Epoch [16/20], Total Train Loss: 0.1280, Total Test Loss: 0.1281, Test Accuracy: 1.0000
-Epoch [17/20], Total Train Loss: 0.1274, Total Test Loss: 0.1278, Test Accuracy: 1.0000
-Epoch [18/20], Total Train Loss: 0.1269, Total Test Loss: 0.1270, Test Accuracy: 1.0000
-Epoch [19/20], Total Train Loss: 0.1264, Total Test Loss: 0.1266, Test Accuracy: 1.0000
-Epoch [20/20], Total Train Loss: 0.1260, Total Test Loss: 0.1262, Test Accuracy: 1.0000
-Model saved to model-HIV_1_M_SPBEnv-12.pth
+Epoch [1/20], Total Train Loss: 3.3433, Total Test Loss: 3.1639, Test Accuracy: 0.1542
+Epoch [2/20], Total Train Loss: 2.5807, Total Test Loss: 1.9302, Test Accuracy: 0.9953
+Epoch [3/20], Total Train Loss: 1.1399, Total Test Loss: 0.6139, Test Accuracy: 1.0000
+Epoch [4/20], Total Train Loss: 0.3901, Total Test Loss: 0.2328, Test Accuracy: 1.0000
+Epoch [5/20], Total Train Loss: 0.1273, Total Test Loss: 0.0626, Test Accuracy: 1.0000
+Epoch [6/20], Total Train Loss: 0.0335, Total Test Loss: 0.0212, Test Accuracy: 1.0000
+Epoch [7/20], Total Train Loss: 0.0153, Total Test Loss: 0.0136, Test Accuracy: 1.0000
+Epoch [8/20], Total Train Loss: 0.0108, Total Test Loss: 0.0108, Test Accuracy: 1.0000
+Epoch [9/20], Total Train Loss: 0.0085, Total Test Loss: 0.0088, Test Accuracy: 1.0000
+Epoch [10/20], Total Train Loss: 0.0073, Total Test Loss: 0.0078, Test Accuracy: 1.0000
+Epoch [11/20], Total Train Loss: 0.0064, Total Test Loss: 0.0079, Test Accuracy: 1.0000
+Epoch [12/20], Total Train Loss: 0.0057, Total Test Loss: 0.0060, Test Accuracy: 1.0000
+Epoch [13/20], Total Train Loss: 0.0051, Total Test Loss: 0.0055, Test Accuracy: 1.0000
+Epoch [14/20], Total Train Loss: 0.0046, Total Test Loss: 0.0049, Test Accuracy: 1.0000
+Epoch [15/20], Total Train Loss: 0.0042, Total Test Loss: 0.0049, Test Accuracy: 1.0000
+Epoch [16/20], Total Train Loss: 0.0039, Total Test Loss: 0.0042, Test Accuracy: 1.0000
+Epoch [17/20], Total Train Loss: 0.0035, Total Test Loss: 0.0039, Test Accuracy: 1.0000
+Epoch [18/20], Total Train Loss: 0.0035, Total Test Loss: 0.0038, Test Accuracy: 1.0000
+Epoch [19/20], Total Train Loss: 0.0034, Total Test Loss: 0.0041, Test Accuracy: 1.0000
+Epoch [20/20], Total Train Loss: 0.0030, Total Test Loss: 0.0032, Test Accuracy: 1.0000
+Model saved to model-HIV_1_M_SPBEnv-Final.pth
 Validation Accuracy: 1.0
 Validation Recall: 1.0
 Validation Precision: 1.0
+Validation F1 Score: 1.0
 Validation F1 Score: 1.0
 ```
 ### architecture
