@@ -87,7 +87,7 @@ is represented as a dot in the 2D plot. The DNA data were vectorized by K-mer me
 
 ## 9. Model deployment
 I deployed a trained model on a dedicated server, which is publicly available at:  
-http://www.peng-lab.org:5000/analysis, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
+http://www.hivsubclass.com/, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
 Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.   
 ## 10. The data sets
 ### 10.1 The original dataset
