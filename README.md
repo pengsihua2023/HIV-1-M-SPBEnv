@@ -56,35 +56,12 @@ pip install .
 #Just execute the command "hiv-env" in any command line environment. 
 hiv-env
 ````  
-## 5. Results
-After running the "hiv-env" command, the model begins to be trained. After the training is completed, the results shown in Figure 1 are obtained. After manually closing the first graphics window, the results in Figure 2 are obtained, which is a confusion matrix. Finally, after manually closing the second graphics window, the verification parameter values based on the independent verification data set will be output in the command line interface: Accuracy, Recall, Precesion, and F1 Score.  
-
-The trained model file, named "model-HIV_1_M_SPBEnv.pth", will be saved in current directory.  
-
-HIV-1-M-SPBEnv was trained by using the original dataset (Table 1) plus the synthetic dataset (Table 2).  HIV-1-M-SPBEnv's classifcation accuracy was 100% for the independent dataset (Table 3). Figure 1 shows the model performance during training.  
-![Loss function curve during training](images/Figure_1.png)   
-**Figure 1.** Illustration of Model performance. On the left, the figure delineates the relationship between the Total training loss and the Total test loss over a span of 100 epochs. Total train loss and Total test loss are the sums of the model reconstruction loss obtained by training the Autoencoder and the training loss of the classifier, based on the model training data set and the model test data set respectively. On the right, the figure shows the trajectory of classification accuracy during 100 epochs of training based on the test data set.    
-![Confusion matrix](images/Figure_2.png)   
-**Figure 2.** Confusion matrix based on the independent validation data set
-
-## 6. Uninstall HIV-1-M-SPBEnv
+## 5. Uninstall HIV-1-M-SPBEnv
 ````python
 pip uninstall HIV-1-M-SPBEnv
 ````
 ## 7. Genetic operations for generating new env gene sequence samples
 I adopted artificial molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and large fragment recombination. The complete codebase for artificial genetic operations is accessible at the following link: https://github.com/pengsihua2023/HIV-1-M-SPBEnv/tree/main/code  
-## 8　How can I prove that the synthetic samples are reliable? 　　
-### 8.1 By using unrooted phylogenetic tree  
-I randomly selected 5 L synthetic samples from the 500 synthesized L samples, and jointly constructed a phylogenetic tree with 42 gold standard samples of 12 subtypes of HIV type 1. The results show (Figure 3) that the synthesized L samples and the gold standard L sample were completely clustered together. On the other hand, I will use synthetic samples and original samples together to form training samples for training to obtain a deep learning model. Finally, I use an independent test data set to verify the results again.　  
-![synthetic Sample H Tree](images/image-L-5-synthetic.png)    
-**Figure 3.** Verification of the usability of generated samples. Marked in green are the 5 synthetic L samples which clustered together with the original L samples (in red), showing that the synthetic samples are potential original L samples.  
-
-### 8.2 By using t-SNE visualzation based on K-mer vectorization
-The labeld DNA samples were visualized with t-distributed stochastic neighbor embedding (t-SNE) and each gene sequence
-is represented as a dot in the 2D plot. The DNA data were vectorized by K-mer method.  
-![synthetic Sample H Tree](images/Figure_4.png)    
-**Figure 4.** Verification of the usability of generated samples by using t-SNE. One color represents a category, and each category has 89 samples, including original samples and synthetic samples.
-
 ## 9. Model deployment
 I deployed a trained model on a dedicated server, which is publicly available at:  
 http://www.hivsubclass.com/, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
