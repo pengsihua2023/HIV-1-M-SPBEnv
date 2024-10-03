@@ -60,55 +60,17 @@ hiv-env
 ````python
 pip uninstall HIV-1-M-SPBEnv
 ````
-## 7. Genetic operations for generating new env gene sequence samples
+## 6. Genetic operations for generating new env gene sequence samples
 I adopted artificial molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and large fragment recombination. The complete codebase for artificial genetic operations is accessible at the following link: https://github.com/pengsihua2023/HIV-1-M-SPBEnv/tree/main/code  
-## 9. Model deployment
+## 7. Model deployment
 I deployed a trained model on a dedicated server, which is publicly available at:  
 http://www.hivsubclass.com/, to make it easy for biomedical researcher to perform HIV 1 subtype classification in their research.  
 Users can upload their env gene sequences of HIV to the server, and then they can quickly obtain the predicted results of the HIV 1 subtype classification.   
-## 10. The data sets
-### 10.1 The original dataset
-The detailed composition of the DNA sequence data of HIV env gene is shown in Table 1. For this data set, the sample size of some subtypes is too small, and there are only 2-5 samples in 4 subtypes. It is obviously impossible to build a machine learning model on such data. Then the only way is to find ways to increase the sample size for the small sample size subtypes.  
-### 10.2 The synthetic dataset
-I adopted molecular evolution methods for DNA sequence sample synthesis, including synonymous mutation, non-synonymous mutation, insertion mutation, deletion mutation and env gene large fragment recombination. Synthetic data samples are included in both the model training dataset (Table 2) and the model evaluation dataset (Table 3).    
-#### Table 1 The original data set of HIV-1 M group env DNA sequences.
-| Subtype |Sample Size | Subtype |Sample Size |
-|-------|---------|-------|---------|
-| A1 | 285 | F2 |16 |
-| A2 | 5 | G |98 |
-| B | 3,020 | H |7 |
-| C | 1,801 | J |4 |
-| D | 160 | K |2|
-| F1 | 95 | L |3 |
-### 10.3 The Training dataset
-#### Table 2 The dataset for model training.  
-| Subtype |Sample Size | Subtype |Sample Size |
-|-------|---------|-------|---------|
-| A1 | 500 (250)* | F2 |500 (12) |
-| A2 | 500 (4) | G |500 (70) |
-| B | 500 (500) | H |500 (5) |
-| C | 500 (500) | J |500 (3) |
-| D | 500 (130) | K |500 (1)|
-| F1 | 500 (70) | L |500 (2) |  
-
-#### * 500 (300): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 500-300=200.  
-### 10.4 The independent evaluation dataset
-#### Table 3 The Independent data set for model evaluation＊.
-| Subtype |Sample Size | Subtype |Sample Size |
-|-------|---------|-------|---------|
-| A1 | 35 | F2 |4 |
-| A2 | 1 | G |28 |
-| B | 2,520 | H |2 |
-| C | 1,301 | J |1 |
-| D | 30 | K |1|
-| F1 | 25 | L |1 |
-
-＊All the independent testting dataset is from the original dataset. 
-## 11. License
+## 8. License
 HIV-1-M-SPBEnv has a MIT license, as seen in the [LICENSE.md](https://github.com/pengsihua2023/HIV-1-M-SPBEnv/blob/main/LICENSE) file.  
-## 12. Citation
+## 9. Citation
 Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using convolutional Autoencoder and full connected neural network. (Manuscript under review)   
-## 13. Contact
+## 10. Contact
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu)      
 
 Pull requests are highly welcomed!   
