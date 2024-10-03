@@ -97,34 +97,34 @@ I adopted molecular evolution methods for DNA sequence sample synthesis, includi
 #### Table 1 The original data set of HIV-1 M group env DNA sequences.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 317 | F2 |16 |
-| A2 | 5 | G |136 |
-| B | 2,885 | H |10 |
-| C | 1,717 | J |5 |
-| D | 145 | K |2|
-| F1 | 73 | L |3 |
+| A1 | 285 | F2 |16 |
+| A2 | 5 | G |98 |
+| B | 3,020 | H |7 |
+| C | 1,801 | J |4 |
+| D | 160 | K |2|
+| F1 | 95 | L |3 |
 ### 10.3 The Training dataset
 #### Table 2 The dataset for model training.  
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 500 (300)* | F2 |500 (12) |
-| A2 | 500 (4) | G |500 (120) |
-| B | 500 (500) | H |500 (8) |
-| C | 500 (500) | J |500 (4) |
-| D | 500 (120) | K |500 (1)|
-| F1 | 500 (60) | L |500 (2) |  
+| A1 | 500 (250)* | F2 |500 (12) |
+| A2 | 500 (4) | G |500 (70) |
+| B | 500 (500) | H |500 (5) |
+| C | 500 (500) | J |500 (3) |
+| D | 500 (130) | K |500 (1)|
+| F1 | 500 (70) | L |500 (2) |  
 
 #### * 500 (300): The number in bracket is the original sample data. In this case the sample size of synthetic data set is 500-300=200.  
 ### 10.4 The independent evaluation dataset
 #### Table 3 The Independent data set for model evaluation＊.
 | Subtype |Sample Size | Subtype |Sample Size |
 |-------|---------|-------|---------|
-| A1 | 11 | F2 |4 |
-| A2 | 1 | G |16 |
-| B | 2,387 | H |2 |
-| C | 1,217 | J |1 |
-| D | 25 | K |1|
-| F1 | 13 | L |1 |
+| A1 | 35 | F2 |4 |
+| A2 | 1 | G |28 |
+| B | 2,520 | H |2 |
+| C | 1,301 | J |1 |
+| D | 30 | K |1|
+| F1 | 25 | L |1 |
 
 ＊All the independent testting dataset is from the original dataset. 
 ## 11. License
