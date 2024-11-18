@@ -69,7 +69,16 @@ Users can upload their env gene sequences of HIV to the server, and then they ca
 ## 8. License
 HIV-1-M-SPBEnv has a MIT license, as seen in the [LICENSE.md](https://github.com/pengsihua2023/HIV-1-M-SPBEnv/blob/main/LICENSE) file.  
 ## 9. Citation
-Sihua Peng, Ming Zhang. HIV-1-M-SPBEnv: HIV-1 M group subtype prediction using convolutional Autoencoder and full connected neural network. (Manuscript under review)   
+If you find this repo helpful, please cite our paper.  
+```
+@article{peng2024-HIV-1-M-SPBEnv,
+  title={HIV-1 M group subtype classification using deep learning approach},
+  author={Sihua peng},
+  journal={Computerd in Biology Medicine},
+  year={2024}
+}
+```
+ 
 ## 10. Contact
 If you have any questions, please feel free to contact Sihua Peng (Email: Sihua.Peng@uga.edu)      
 
