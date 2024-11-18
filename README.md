@@ -76,6 +76,8 @@ If you find this repo helpful, please cite our paper.
   author={Sihua peng},
   journal={Computerd in Biology Medicine},
   year={2024}
+  DOI={10.1016/j.compbiomed.2024.109218}
+  PMID={39369547}
 }
 ```
  
